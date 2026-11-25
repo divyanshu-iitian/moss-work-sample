@@ -1,0 +1,372 @@
+# Moss Docs
+# Add Documents
+# Delete Documents
+# Get Documents
+# Moss REST API authentication
+# Introduction
+# Overview
+# Delete Index
+# Get Index
+# Get Job Status
+# Init Upload
+# List Indexes
+# Start Build
+# Chat Completions
+# List models
+# Responses
+# Tasks
+# Create Web Source
+# Delete Web Source
+# Get Web Source
+# List Web Sources
+# Resync Web Source
+# Update Web Source
+# Agent Context
+# Browser Extension Context
+# Cross-Agent Context & Omni-Channel Handoff
+# Data Hydration & Sync
+# Hydrate a loaded index for querying...
+# ...or hydrate a session by name (auto-loads the cloud index if it exists).
+# Force an immediate refresh after a known critical update.
+# Electron App Local Search
+# Live-Call Context
+# Local Embeddings
+# Sub-10ms Knowledge Retrieval
+# Real-Time Local Indexing
+# Voice Agent (LiveKit)
+# Changelog
+# Airline Customer Service Agent
+# Index cache. In production, point it at persistent storage.
+# Candidate Screening Agent
+# Index cache. In production, point it at persistent storage.
+# Default index names, for a call whose job metadata names none
+# Multi-Agent Travel Planner
+# Generalist Voice Agent
+# LiveKit
+# Moss
+# Index cache. In production, point it at persistent storage.
+# OpenAI
+# Deepgram
+# Cartesia (TTS)
+# Development (auto-reloads on file changes)
+# Production
+# Grounded FAQ Agent
+# Mortgage Lending Agent
+# Index cache. In production, point it at persistent storage.
+# Postgres Sync
+# The queries below add conditions to this one, so keep its WHERE clause last.
+# The rule of is_scope_id, plus room for the two ids of a scoped name.
+# The shared index needs this filter on every query.
+# The JSON of a document or an id, plus a comma.
+# An index, with the condition on FACTS_SQL that selects its facts.
+# Reads the facts of one scope in pages, in id order.
+# A fact id as Postgres writes a uuid. Match it to your primary key.
+# Every document of an index, or none when it does not exist.
+# The ids come from the session's authorization. The scope rule checks only their form.
+# Customer Support Agent
+# Fewer, highly semantic results
+# More results with keyword influence
+# Core concepts
+# Demo booking
+# Install and keys
+# React components
+# Server token route
+# CRM
+# Founding Agent overview
+# Create and configure an agent
+# Leads and conversations
+# Live calls and human handoff
+# Teach your agent
+# Plans and pricing
+# Founding Agent quickstart
+# Moss documentation
+# Real-time retrieval for conversational AI
+# Bring your own key
+# Errors and limits
+# MCP servers
+# Models
+# Moss search tool
+# OpenAI compatibility
+# Moss Inference
+# Pricing
+# Quickstart
+# Ground answers in your indexes
+# SDKs
+# Android
+# Browser
+# C
+# Elixir
+# mix.exs
+# JavaScript
+# Python
+# Swift
+# Streaming
+# Tasks
+# Tool calling
+# Moss SDK authentication
+# Custom Embeddings
+# Deployment / Production
+# Hybrid Search
+# Indexing Data
+# Upsert more docs later
+# Fetch specific docs
+# Delete docs or the index when done
+# JSON: [{"id": "faq-1", "text": "...", "metadata": {"category": "billing"}}, ...]
+# TXT: one document per paragraph
+# JSON array or JSON Lines text, or a .json, .jsonl or .ndjson file
+# Dicts with the DocumentInfo fields
+# Text and markdown files are chunked for you, into handbook.md#0, handbook.md#1, ...
+# chunk_size 200 to 2000 characters (default 1200), chunk_overlap 0 to half of chunk_size (default 200),
+# mode "pages" or "sentences", markdown_header_depth 1 to 6
+# Poll docs.job_id and blog.job_id with client.get_job_status until status.value == 'completed'
+# Memory Sizing
+# Metadata Filtering
+# January 2026 in UTC, both bounds included.
+# Multi-Index Search
+# Releasing Resources
+# Retrieval
+# Sessions
+# Storage & Persistence
+# Agno
+# or
+# Agora
+# Moss Credentials
+# Agora Credentials
+# in another terminal, for local dev only:
+# Data Connectors
+# DSPy
+# or
+# Read documents
+# Add or upsert documents
+# ElevenLabs
+# Moss Credentials
+# ElevenLabs Credentials
+# Create and configure the Moss tool
+# Pre-load the index for fast queries
+# Register with ElevenLabs ClientTools
+# Start the conversation
+# LangChain
+# Moss Credentials
+# OpenAI
+# Use in async contexts (recommended)
+# tool.name == "moss_search"
+# Use with create_openai_functions_agent or any LangChain agent
+# LiveKit
+# LiveKit Credentials, keep it as it is for local deployment, don't change it.
+# Moss Credentials
+# Moss index cache. In production, point it at persistent storage.
+# AI Provider Keys
+# Moss imports
+# Knowledge bases for a call dispatched without "moss_indexes" in its metadata
+# Mastra
+# MCP Server
+# Markdown Indexer
+# or
+# .env
+# Moss CLI
+# Interactive setup (recommended)
+# Environment variables
+# Inline flags, before the command
+# 1. Save credentials
+# 2. List indexes
+# 3. Create an index from a JSON file
+# 4. Search it
+# Approve the login in the browser. The CLI token is saved to ~/.moss/config.json
+# Show the account the token belongs to
+# Projects in the workspaces you belong to, with your role in each
+# Project keys. keys create shows the secret only once.
+# Revoke the saved token and remove it from ~/.moss/config.json
+# Approve in the browser. The token is printed, not saved.
+# In the agent's environment
+# Create
+# List
+# Inspect
+# Delete
+# Add documents
+# Retrieve documents
+# Delete documents
+# Query (downloads the index first)
+# Tune results
+# Metadata filter
+# Pipe from stdin
+# JSON output for scripting
+# Check status
+# Wait with live progress
+# Next.js
+# Pipecat
+# Continue the numbering when the session resumes.
+# sim.ai
+# Strands Agents
+# Assumes you already created moss = MossSearchTool(...) and awaited moss.load_index()
+# OpenAI
+# Anthropic
+# VAPI
+# Moss Credentials
+# Endpoint authentication
+# Provision the server-side secret/token for the VAPI Custom Credential
+# you configure below. Never expose project or endpoint secrets to clients.
+# Initialize the search client
+# Load the index at startup
+# Search
+# Vercel AI SDK
+# VitePress
+# Pricing & Limits
+# Android SDK Overview
+# Moss Browser SDK overview
+# Browser vs Node
+# MossClient (Browser SDK)
+# API reference
+# Examples
+# Moss C SDK overview
+# Pick the tarball for your platform:
+#   libmoss-v0.33.0-aarch64-apple-darwin.tar.gz      (macOS, Apple Silicon)
+#   libmoss-v0.33.0-x86_64-unknown-linux-gnu.tar.gz  (Linux, x86_64)
+#   libmoss-v0.33.0-aarch64-unknown-linux-gnu.tar.gz (Linux, arm64)
+#   libmoss-v0.33.0-x86_64-pc-windows-msvc.tar.gz    (Windows, x86_64)
+# Moss Elixir SDK overview
+# mix.exs
+# Initialize the client with your project credentials
+# Prepare documents to index
+# Create a cloud index (defaults to the moss-minilm model)
+# Load the index into memory before querying
+# Query the loaded index
+# Push the session index to the cloud when done
+# Later: skip the cloud load and restore the snapshot
+# Or pass a directory of your own
+# Moss.Client
+# With a metadata filter
+# Skip the cloud load and restore a snapshot saved with Moss.Session.save_to_disk/2
+# Moss.Session
+# Moss Elixir SDK types
+# Errors & Troubleshooting
+# Moss JavaScript SDK overview
+# MossClient (JavaScript SDK)
+# SessionIndex (JavaScript SDK)
+# Custom Authenticator (JS)
+# Custom embeddings (JavaScript SDK)
+# Index from Files (JavaScript SDK)
+# isMossError
+# Hybrid search (JavaScript SDK)
+# CreateIndexFromFilesOptions
+# CreateIndexOptions
+# DocumentInfo (JavaScript SDK)
+# GetDocumentsOptions (JavaScript SDK)
+# IndexInfo (JavaScript SDK)
+# JobProgress (JavaScript SDK)
+# JobStatusResponse (JavaScript SDK)
+# LoadIndexOptions
+# LoadIndexesResult (JavaScript SDK)
+# LoadSessionOptions
+# ModelRef (JavaScript SDK)
+# MossError (JavaScript SDK)
+# MutationOptions (JavaScript SDK)
+# MutationResult (JavaScript SDK)
+# ParseFileInput (JavaScript SDK)
+# ParseOptions (JavaScript SDK)
+# PushIndexResult (JavaScript SDK)
+# QueryOptions (JavaScript SDK)
+# QueryResultDocumentInfo (JavaScript SDK)
+# RefreshResult
+# SearchResult (JavaScript SDK)
+# Metadata filtering (JavaScript SDK)
+# Sessions (JavaScript SDK)
+# FilterCondition
+# ISODate
+# JobPhase (JavaScript SDK)
+# JobStatus (JavaScript SDK)
+# MetadataFilter
+# MossErrorCode
+# MossModel
+# Web Sources (JavaScript SDK)
+# Licensing
+# Moss Python SDK overview
+# Create (defaults to moss-minilm)
+# Inspect
+# Delete
+# Add or upsert
+# Fetch all, or by id
+# Delete by id
+# Later: skip the cloud load and restore the snapshot
+# JobHandle
+# Fire-and-forget: save the id, tear down, reconnect later
+# Or watch it in-process — throttle your polling so you don't hammer the API
+# Or simply block until done (the SDK polls for you)
+# MossClient (Python SDK)
+# Submit the build and return right away
+# Optional: watch progress
+# Block until done if you want the result in-process
+# Or reconnect later from a fresh client and poll by id
+# JSON text, a JSON Lines file, or dicts
+# Text and markdown files are chunked into handbook.md#0, handbook.md#1, ...
+# Tune the native chunker, or split text yourself
+# Resume the cloud index of the same name, or start empty
+# Skip the cloud load and restore a snapshot saved with save_to_disk
+# client.close() ran here
+# SessionIndex (Python SDK)
+# Auto-loads from cloud if the index exists, starts fresh if not
+# optionally: await client.get_job_status(result.job_id)
+# session.close() ran here
+# Custom embeddings (Python SDK)
+# Index from Files (Python SDK)
+# Load the new index, then query it in memory
+# Exact / Graph Retrieval (Python SDK)
+# -> [doc_42, doc_17, doc_88], minus any id that doesn't exist
+# Every published doc, newest first.
+# Compose with $and / $or, numeric-aware comparisons, $in, $near — same as queries.
+# One document per article_id; .text is the chunks joined in chunk_index order.
+# Hybrid search (Python SDK)
+# AddDocumentsOptions
+# Chunking
+# Interface: Chunking
+# DocumentInfo (Python SDK)
+# GetDocumentsOptions (Python SDK)
+# IndexInfo (Python SDK)
+# IndexStatus
+# InvalidArgumentError
+# JobPhase (Python SDK)
+# JobProgress (Python SDK)
+# JobStatus (Python SDK)
+# JobStatusResponse (Python SDK)
+# LoadIndexesResult (Python SDK)
+# ModelRef (Python SDK)
+# MossError (Python SDK)
+# MutationOptions (Python SDK)
+# MutationResult (Python SDK)
+# ParentGrouping
+# ParseFileInput (Python SDK)
+# ParseOptions (Python SDK)
+# PushIndexResult (Python SDK)
+# QueryOptions (Python SDK)
+# Field condition
+# Logical composition
+# QueryResultDocumentInfo (Python SDK)
+# SearchResult (Python SDK)
+# Metadata filtering (Python SDK)
+# $eq - customer turns only.
+# $ne - exclude agent turns.
+# $gt - priority > 3.
+# $or - refund or upgrade topics.
+# Every match, oldest first, with no ranking (sessions only).
+# Multi-index search
+# A typo on one name does not stop the others from loading.
+# Sessions (Python SDK)
+# Add or update docs - appended to whatever was loaded.
+# Query locally.
+# Fetch and delete by id, all in-memory.
+# Structured payload
+# Web Sources (Python SDK)
+# Two sites, one index. The first call creates the index; the second adds to it.
+# SDK Overview
+# Moss Swift SDK overview
+# MossClient (Swift SDK)
+# MossSession
+# Custom Authenticator
+# Exact / Graph Retrieval (Swift SDK)
+# Querying
+# Moss Swift SDK types
+# Telemetry
+# Core Concepts
+# SDK Quickstart
+# Vibecoding with Moss
+# What is Moss?
+# Voice Agents

@@ -1,0 +1,4 @@
+moss>=1.22.0
+openai
+httpx
+python-dotenv
